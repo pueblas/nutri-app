@@ -4,6 +4,7 @@ import { Dashboard } from './pages/Dashboard';
 import { Patients } from './pages/Patients';
 import { PatientDetail } from './pages/PatientDetail';
 import { NewConsultation } from './pages/NewConsultation';
+import { ReportGenerator } from './pages/ReportGenerator';
 import './App.css';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Route path="pacientes/:id" element={<PatientDetail />} />
           <Route path="consultas" element={<div className="glass-panel" style={{ padding: 24 }}>Módulo de Consultas en construcción</div>} />
           <Route path="consultas/nueva/:id" element={<NewConsultation />} />
+          <Route path="reporte/:id" element={<ReportGenerator />} />
           <Route path="settings" element={<div className="glass-panel" style={{ padding: 24 }}>Ajustes</div>} />
         </Route>
       </Routes>
