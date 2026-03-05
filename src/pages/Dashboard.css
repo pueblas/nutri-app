@@ -1,0 +1,181 @@
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.page-header h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: var(--text-secondary);
+    font-size: 16px;
+}
+
+.current-date {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--accent-primary);
+    font-weight: 500;
+    background-color: var(--bg-secondary);
+    padding: 8px 16px;
+    border-radius: var(--radius-full);
+    box-shadow: var(--shadow-sm);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.stat-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 24px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.stat-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-info h3 {
+    font-size: 14px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.stat-value {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.dashboard-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 24px;
+}
+
+.appointments-section {
+    padding: 24px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.section-header h2 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.btn-text {
+    color: var(--accent-primary);
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.btn-text:hover {
+    text-decoration: underline;
+}
+
+.appointments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.appointment-item {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    background-color: var(--glass-bg);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--glass-border);
+    transition: all 0.2s ease;
+}
+
+.appointment-item:hover {
+    background-color: var(--bg-secondary);
+    box-shadow: var(--shadow-sm);
+    transform: translateX(4px);
+}
+
+.apt-time {
+    font-weight: 600;
+    color: var(--accent-dark);
+    font-size: 15px;
+    width: 80px;
+}
+
+.apt-details {
+    flex: 1;
+}
+
+.apt-details h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.apt-type {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+.badge {
+    padding: 6px 12px;
+    border-radius: var(--radius-full);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.badge.completado {
+    background-color: var(--success-light);
+    color: var(--success);
+}
+
+.badge.en-progreso {
+    background-color: #FEF3C7;
+    color: #D97706;
+}
+
+.badge.pendiente {
+    background-color: var(--bg-primary);
+    color: var(--text-secondary);
+    border: 1px solid var(--glass-border);
+}
+
+@media (max-width: 1024px) {
+    .dashboard-content {
+        grid-template-columns: 1fr;
+    }
+}

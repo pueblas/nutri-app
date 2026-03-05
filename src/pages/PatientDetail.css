@@ -1,0 +1,168 @@
+.patient-detail-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.btn-icon-blur {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-full);
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    color: var(--text-primary);
+    transition: all 0.2s ease;
+}
+
+.btn-icon-blur:hover {
+    background: white;
+    transform: translateX(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.header-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-secondary {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
+    padding: 12px 20px;
+    border-radius: var(--radius-md);
+    font-weight: 500;
+    font-size: 15px;
+    transition: all 0.2s ease;
+    border: 1px solid var(--glass-border);
+}
+
+.btn-secondary:hover {
+    background-color: var(--bg-accent-hover);
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 24px;
+}
+
+.biometrics-card,
+.chart-card,
+.history-card {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.metrics-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.metric-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 16px;
+    background-color: var(--bg-primary);
+    border-radius: var(--radius-sm);
+}
+
+.metric-item.highlight {
+    background-color: var(--success-light);
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.metric-item .label {
+    color: var(--text-secondary);
+    font-size: 14px;
+}
+
+.metric-item .value {
+    font-weight: 600;
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-text-small {
+    color: var(--accent-primary);
+    font-size: 13px;
+    font-weight: 500;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-text-small:hover {
+    text-decoration: underline;
+}
+
+.chart-wrapper {
+    flex: 1;
+    min-height: 250px;
+    width: 100%;
+}
+
+.history-card h2 {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.history-table th {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--glass-border);
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.history-table td {
+    padding: 16px;
+    border-bottom: 1px solid var(--bg-primary);
+    font-size: 14px;
+}
+
+.notes-col {
+    max-width: 400px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 1024px) {
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+}
