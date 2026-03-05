@@ -21,7 +21,7 @@ export const NewConsultation = () => {
     const handleSave = () => {
         // Acá en el MVP solo simulamos el guardado
         alert(`Consulta guardada para ${patient.name}`);
-        navigate(`/pacientes/${patient.id}`);
+        navigate(`/reporte/${patient.id}`);
     };
 
     return (
